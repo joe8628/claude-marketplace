@@ -1,0 +1,26 @@
+{
+  "name": "ai-tools",
+  "owner": {
+    "name": "AI DevTools Team",
+    "email": "joe8628@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "contextManager",
+      "source": "./plugins/context",
+      "description": "Context Manager for Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "Context Manager for Claude"
+      }
+    },
+    {
+      "name": "Claude Marketplace",
+      "source": {
+        "source": "github",
+        "repo": "joe8628/claude-marketplace"
+      },
+      "description": "AI Agents automation tools"
+    }
+  ]
+}
