@@ -1,0 +1,63 @@
+{
+  "name": "context-manager",
+  "displayName": "Context Manager",
+  "version": "1.0.0",
+  "publisher": "joe8628",
+  "description": "Centralized encrypted context management for AI agent sessions",
+  "categories": ["Productivity"],
+  "keywords": ["context", "git-crypt", "1password", "sessions", "ai-agent"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joe8628/ai-agents-context"
+  },
+  "license": "MIT",
+  "engines": {
+    "claude": "^1.0.0"
+  },
+  "main": "./dist/index.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "contextManager.export",
+        "title": "Export Session Context"
+      },
+      {
+        "command": "contextManager.retrieve",
+        "title": "Retrieve Past Context"
+      },
+      {
+        "command": "contextManager.setup",
+        "title": "Setup Project"
+      },
+      {
+        "command": "contextManager.unlock",
+        "title": "Unlock Repository"
+      },
+      {
+        "command": "contextManager.sync",
+        "title": "Sync Context"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Context Manager",
+      "properties": {
+        "contextManager.repositoryPath": {
+          "type": "string",
+          "default": "~/ai-agents-context",
+          "description": "Path to central context repository"
+        },
+        "contextManager.autoRetrieve": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-load context when starting session"
+        },
+        "contextManager.autoExport": {
+          "type": "boolean",
+          "default": false,
+          "description": "Auto-save context after session"
+        }
+      }
+    }
+  }
+}
